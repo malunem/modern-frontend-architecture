@@ -1,6 +1,20 @@
 import React from 'react';
 import './ProductListItem.css';
 
+function Heading({ children }) {
+  return <h2>{children}</h2>;
+}
+function Card({ children, highlight }) {
+  const cardClassName = highlight ? "card onsale" : "card";
+  return <div className={cardClassName}>{children}</div>;
+}
+function Text({ children }) {
+  return <span>{children}</span>;
+}
+function Button({ onClick, children }) {
+  return <button onClick={onClick}>{children}</button>;
+}
+
 export default function ProductListItem({
   name,
   price,
@@ -10,13 +24,13 @@ export default function ProductListItem({
   isOnSale,
 }) {
   return (
-    <div className={`card ${isOnSale && 'onsale'}`}>
-      <h2>{name}</h2>
+    <Card highlight={isOnSale}>
+      <Heading>{name}</Heading>
       <img src={imageUrl} alt="" />
-      <small>{price}</small>
-      <button onClick={onAddToCart} disabled={isSoldOut}>
+      <Text>{price}</Text>
+      <Button onClick={onAddToCart} disabled={isSoldOut}>
         {isSoldOut ? "Sold out" : "Add to Cart"}
-      </button>
-    </div>
+      </Button>
+    </Card>
   );
 }
