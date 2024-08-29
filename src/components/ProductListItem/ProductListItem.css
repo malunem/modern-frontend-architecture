@@ -19,3 +19,9 @@ img {
 .card small::before {
   content: '$'
 }
+.onsale {
+  background-color: #E8F6FF;
+}
+.onsale h2::after {
+  content: ' (On Sale)';
+}

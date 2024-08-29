@@ -6,10 +6,11 @@ export default function ProductListItem({
   price,
   imageUrl,
   onAddToCart,
-  isSoldOut
+  isSoldOut,
+  isOnSale,
 }) {
   return (
-    <div className="card">
+    <div className={`card ${isOnSale && 'onsale'}`}>
       <h2>{name}</h2>
       <img src={imageUrl} alt="" />
       <small>{price}</small>

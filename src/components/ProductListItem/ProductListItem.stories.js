@@ -28,3 +28,13 @@ export const soldOut = () => (
     isSoldOut
   />
 );
+
+export const onSale = () => (
+  <ProductListItem
+    name={text("Name", "Standard Coffee")}
+    price={text("price", "2.50")}
+    onAddToCart={action("Add to cart clicked")}
+    imageUrl={text("imageUrl", coffeeImgUrl)}
+    isOnSale
+  />
+);
