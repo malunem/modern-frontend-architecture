@@ -10,7 +10,7 @@ export default {
 
 const coffeeImgUrl = "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg"
 
-export const standard = () => (
+export const Standard = () => (
   <ProductListItem
     name={text("Name", "Standard Coffee")}
     price={text("price", "2.50")}
@@ -19,7 +19,7 @@ export const standard = () => (
   />
 )
 
-export const soldOut = () => (
+export const SoldOut = () => (
   <ProductListItem
     name={text("Name", "Standard Coffee")}
     price={text("price", "2.50")}
@@ -29,7 +29,7 @@ export const soldOut = () => (
   />
 );
 
-export const onSale = () => (
+export const OnSale = () => (
   <ProductListItem
     name={text("Name", "Standard Coffee")}
     price={text("price", "2.50")}
