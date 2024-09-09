@@ -1,11 +1,17 @@
+export const statusTypes = {
+  loading: "loading",
+  errored: "errored",
+  loaded: "loaded"
+};
+
 export default function ProductList({
-  isLoading, hasError, ...otherProps
+  status, ...otherProps
 }) {
-  if (isLoading) {
+  if (status === statusTypes.loading) {
     return <Loading />;
   }
-  if (hasError) {
-    return <Error />;
+  if (status === statusTypes.errored) {
+    return <Error message="Failed to load data" />;
   }
   return // standard output when data present
 }
