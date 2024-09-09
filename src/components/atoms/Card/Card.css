@@ -1,0 +1,14 @@
+.card {
+    background-color: var(--background-default);
+    color: var(--primary);
+    padding: var(--spacing-medium);
+    margin: var(--spacing-large);
+    border: var(--border-default);
+    border-color: var(--light);
+    border-radius: var(--radius-default);
+    box-shadow: var(--shadow-default);
+}
+
+.onsale {
+    background-color: var(--background-onsale);
+}

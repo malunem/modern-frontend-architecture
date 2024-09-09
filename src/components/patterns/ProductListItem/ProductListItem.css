@@ -3,13 +3,7 @@ img {
   height: 100px;
   object-fit: cover;
 }
-.card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #EDEDED;
-  padding: 8px;
-  max-width: 240px;
-}
+
 .card button {
   background-color: #0A84FF;
   color: #fff;
@@ -19,9 +13,7 @@ img {
 .card small::before {
   content: '$'
 }
-.onsale {
-  background-color: #E8F6FF;
-}
+
 .onsale h2::after {
   content: ' (On Sale)';
 }
