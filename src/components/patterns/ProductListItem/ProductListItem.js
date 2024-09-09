@@ -1,19 +1,9 @@
 import React from 'react';
 import './ProductListItem.css';
-
-function Heading({ children }) {
-  return <h2>{children}</h2>;
-}
-function Card({ children, highlight }) {
-  const cardClassName = highlight ? "card onsale" : "card";
-  return <div className={cardClassName}>{children}</div>;
-}
-function Text({ children }) {
-  return <span>{children}</span>;
-}
-function Button({ onClick, children }) {
-  return <button onClick={onClick}>{children}</button>;
-}
+import Button from '../../atoms/Button';
+import Card from '../../atoms/Card';
+import Heading from '../../atoms/Heading';
+import Text from '../../atoms/Text';
 
 export default function ProductListItem({
   name,
